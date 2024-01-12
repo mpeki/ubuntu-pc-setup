@@ -14,5 +14,6 @@ git clone https://github.com/mpeki/ubuntu-pc-setup.git
 
 pushd ubuntu-pc-setup
 
-./bin/linux-setup.sh
+./bin/user-setup.sh
+#./bin/linux-setup.sh
 
