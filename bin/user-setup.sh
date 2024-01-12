@@ -15,10 +15,11 @@ else
     useradd -m -G sudo -s /bin/bash "$username"
     passwd "$username"
     tee /etc/wsl.conf << _EOF
-    [user]
-    default=${username}
+[user]
+default=${username}
 _EOF
 fi
 
 # Pause for user input before exiting
 read -p "Press Enter to exit..."
+exit 0

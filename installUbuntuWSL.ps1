@@ -51,4 +51,8 @@ if (Test-Path $tempDirPath -PathType Container) {
     Write-Host "Failed to create or access the temporary directory: $tempDirPath"
 }
 
-wsl.exe -d ubuntu-test bash -c "curl -H 'Cache-Control: no-cache' -s https://raw.githubusercontent.com/mpeki/ubuntu-pc-setup/main/run.sh | bash"
+wsl.exe -d ubuntu-test bash -c "curl -H 'Cache-Control: no-cache' -s https://raw.githubusercontent.com/mpeki/ubuntu-pc-setup/main/init.sh | bash"
+
+wsl.exe --shutdown
+
+wsl.exe -d ubuntu-test bash -c "curl -H 'Cache-Control: no-cache' -s https://raw.githubusercontent.com/mpeki/ubuntu-pc-setup/main/init.sh | bash"
