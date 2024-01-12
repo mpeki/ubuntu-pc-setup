@@ -53,6 +53,7 @@ if (Test-Path $tempDirPath -PathType Container) {
 
 wsl.exe -d ubuntu-test bash -c "curl -H 'Cache-Control: no-cache' -s https://raw.githubusercontent.com/mpeki/ubuntu-pc-setup/main/init.sh | bash"
 
+Write-Host "Restarting WLS ..."
 wsl.exe --terminate ubuntu-test
 
 wsl.exe -d ubuntu-test

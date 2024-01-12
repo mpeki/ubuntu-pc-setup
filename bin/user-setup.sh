@@ -20,5 +20,4 @@ default=${username}
 _EOF
 fi
 
-# Pause for user input before exiting
-read -p "Press Enter to exit..."
+exit 0
