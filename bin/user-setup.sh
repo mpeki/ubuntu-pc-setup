@@ -2,7 +2,9 @@
 
 set -e
 
-username="$1"
+# Prompt the user to enter a username
+echo "Please enter a username:"
+read username
 
 # Use the id command to check if the user exists
 if id "$username" &>/dev/null; then
@@ -17,3 +19,6 @@ else
 default=${username}
 _EOF
 fi
+
+# Pause for user input before exiting
+read -p "Press Enter to exit..."
