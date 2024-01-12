@@ -15,7 +15,7 @@ pushd $SETUP_DIR
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 echo Fetching linux setup repository...
-if [[ -d "${SETUP_DIR}/${PROJECT_NAME}" && "${SETUP_DIR}/${PROJECT_NAME}/.git" ]]; then
+if [[ -d "${SETUP_DIR}/${PROJECT_NAME}" && -d "${SETUP_DIR}/${PROJECT_NAME}/.git" ]]; then
   pushd $PROJECT_NAME
   git pull
 else
@@ -24,7 +24,7 @@ else
 fi
 
 # The line you want to insert into .bashrc
-line_to_insert="/tmp/ubuntu-setup/ubuntu-pc-setup/bin/user-setup.sh"
+line_to_insert="\n## INITIAL USER SETUP\n/tmp/ubuntu-setup/ubuntu-pc-setup/bin/user-setup.sh; exit\n"
 
 # Use sed to insert the line into .bashrc
 sed -i '$a '"$line_to_insert" ~/.bashrc
