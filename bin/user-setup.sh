@@ -20,4 +20,6 @@ default=${username}
 _EOF
 fi
 
+chown -R msp:msp /tmp/ubuntu-setup/ubuntu-pc-setup
+
 exit 0
