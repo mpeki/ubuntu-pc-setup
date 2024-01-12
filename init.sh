@@ -27,4 +27,4 @@ fi
 line_to_insert="/tmp/ubuntu-setup/ubuntu-pc-setup/bin/user-setup.sh"
 
 # Use sed to insert the line into .bashrc
-sed -i "/^# Custom aliases and functions$/a $line_to_insert" ~/.bashrc
+sed -i '$a '"$line_to_insert" ~/.bashrc
