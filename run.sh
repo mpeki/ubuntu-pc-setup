@@ -7,6 +7,12 @@ export SETUP_DIR=/tmp/ubuntu-setup
 
 pushd $SETUP_DIR
 
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+
 echo Fetching linux setup repository...
-git clone git@github.com:mpeki/ubuntu-pc-setup.git
+git clone https://github.com/mpeki/ubuntu-pc-setup.git
+
+pushd ubuntu-pc-setup
+
+./bin/linux-setup.sh
 
