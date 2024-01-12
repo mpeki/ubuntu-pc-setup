@@ -23,6 +23,11 @@ else
   pushd ubuntu-pc-setup
 fi
 
+# The line you want to insert into .bashrc
+line_to_insert="/tmp/ubuntu-setup/ubuntu-pc-setup/bin/user-setup.sh"
+
+# Use sed to insert the line into .bashrc
+sed -i "/^# Custom aliases and functions$/a $line_to_insert" ~/.bashrc
 #./bin/user-setup.sh $username
 
 # Pause for user input before exiting
