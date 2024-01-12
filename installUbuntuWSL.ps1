@@ -58,4 +58,6 @@ wsl.exe --terminate ubuntu-test
 
 wsl.exe -d ubuntu-test
 
+wsl.exe --terminate ubuntu-test
+
 wsl.exe -d ubuntu-test
