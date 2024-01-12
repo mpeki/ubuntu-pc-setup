@@ -38,7 +38,7 @@ if (Test-Path $tempDirPath -PathType Container) {
     # Dispose of the WebClient object
     $webClient.Dispose()
 
-    Write-Host "Installing Ubuntu WSL..."
+    Write-Host "Importing Ubuntu WSL..."
     wsl --import ubuntu-test C:\Users\mpk\wsl\test2 .\ubuntu-23.10-wsl-root-tar.xz
 
     # Move back to the original directory
@@ -51,4 +51,4 @@ if (Test-Path $tempDirPath -PathType Container) {
     Write-Host "Failed to create or access the temporary directory: $tempDirPath"
 }
 
-wsl.exe -d ubuntu-test bash -c "curl -s https://raw.githubusercontent.com/mpeki/ubuntu-pc-setup/main/run.sh | bash"
+wsl.exe -d ubuntu-test bash -c "curl -H 'Cache-Control: no-cache' -s https://raw.githubusercontent.com/mpeki/ubuntu-pc-setup/main/run.sh | bash"
