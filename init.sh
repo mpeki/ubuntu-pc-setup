@@ -4,9 +4,9 @@ set -ue
 export SETUP_DIR=/tmp/ubuntu-setup
 export PROJECT_NAME=ubuntu-pc-setup
 
-# Prompt the user to enter a username
-echo "Please enter a linux username:"
-read username
+## Prompt the user to enter a username
+#echo "Please enter a linux username:"
+#read username
 
 [[ ! -d $SETUP_DIR ]] && mkdir $SETUP_DIR
 
@@ -23,7 +23,7 @@ else
   pushd ubuntu-pc-setup
 fi
 
-./bin/user-setup.sh $username
+#./bin/user-setup.sh $username
 
 # Pause for user input before exiting
-read -p "Press Enter to exit..."
+#read -p "Press Enter to exit..."
