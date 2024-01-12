@@ -2,7 +2,7 @@
 
 set -e
 
-username="@1"
+username="$1"
 
 # Use the id command to check if the user exists
 if id "$username" &>/dev/null; then
