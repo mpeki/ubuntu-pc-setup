@@ -24,7 +24,7 @@ else
 fi
 
 # The line you want to insert into .bashrc
-line_to_insert="\n## INITIAL USER SETUP\n/tmp/ubuntu-setup/ubuntu-pc-setup/bin/user-setup.sh; exit\n"
+line_to_insert="\n\n## INITIAL USER SETUP\n/tmp/ubuntu-setup/ubuntu-pc-setup/bin/user-setup.sh; exit\n"
 
 # Use sed to insert the line into .bashrc
 sed -i '$a '"$line_to_insert" ~/.bashrc
